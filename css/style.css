@@ -1,0 +1,28 @@
+/* umport fonts */
+
+
+/* styling */ 
+button,body{
+  font-family: 'Inter',sans-serif; 
+}
+:root{
+  --offcanvas-with:270px; 
+  --topNavbarHeight:56px;
+}
+.sidebar-nav{
+  width: var(--offcanvas-with);
+}
+@media (min-width:992px){
+  body{
+    overflow: auto;
+  } 
+  .offcanvas-backdrop::before{
+     display: none;
+  }
+  .sidebar-nav{
+    transform: none;
+    visibility: visible !important;
+    top: var(--topNavbarHeight);
+    height: calc(100% - var(--topNavbarHeight));
+  }
+}
